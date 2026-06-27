@@ -3,6 +3,7 @@
 // ============================================
 
 // ── Typewriter Effect ──────────────────────
+const API_URL = "https://portfolio-api-fxwx.onrender.com";
 const phrases = [
   'MERN Stack Developer',
   'ECE Engineer',
@@ -108,7 +109,7 @@ async function loadSkills() {
   if (!grid) return;
 
   try {
-    const res = await fetch('/api/portfolio/skills');
+   const res = await fetch(`${API_URL}/api/portfolio/skills`);
     const data = await res.json();
 
     if (!data.success || !data.data.length) {
@@ -167,7 +168,7 @@ async function loadProjects() {
   const icons = ['fa-globe', 'fa-shopping-cart', 'fa-users', 'fa-tasks', 'fa-robot', 'fa-code'];
 
   try {
-    const res = await fetch('/api/portfolio/projects');
+   const res = await fetch(`${API_URL}/api/portfolio/projects`);
     const data = await res.json();
 
     if (!data.success || !data.data.length) {
@@ -248,7 +249,7 @@ if (contactForm) {
     submitBtn.disabled = true;
 
     try {
-      const res = await fetch('/api/contact', {
+     const res = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, subject, message })
