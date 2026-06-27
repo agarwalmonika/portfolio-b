@@ -18,7 +18,9 @@
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Demo 
+netlify: https://musical-creponne-c12bf7.netlify.app
+render: https://portfolio-api-fxwx.onrender.com
 
 > Run locally: `http://localhost:5000`
 
